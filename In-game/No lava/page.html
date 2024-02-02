@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solution Page</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #40414f; /* Background color set to #40414f */
+      color: #fff; /* Text color set to white */
+      padding: 20px;
+      text-align: center; /* Center-align text */
+    }
+    .solution-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .solution-textbox {
+      width: 60%; /* Set width of the text box */
+      margin: 0 auto; /* Center the text box horizontally */
+      text-align: left; /* Align text to the left within the text box */
+      padding: 20px; /* Add padding for spacing */
+      background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+      border-radius: 10px; /* Rounded corners */
+    }
+    .return {
+      display: none; /* Initially hide the button */
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      position: absolute; /* Position the button absolutely */
+      top: 20px; /* Distance from the top */
+      left: 20px; /* Distance from the left */
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>After dying in lava I can’t respawn</h1>
+  <div class="solution-textbox">
+
+    <p>this is a bug the only way to respawn is to log into the server on a computer, respawn and then log back in on your quest</p>
+    <p>​</p>
+    <p>alternatively you could make sure this gamerule is enabled, this will not give you the option to respawn and you will auto respawn immediately - <b>/gamerule doImmediateRespawn true</b>
+We have tested the command to see if enabling it after you have died fixes the issue it doesn't</p>
+    <p>​</p>
+    <p>another option is to delete your player data file, however <b>deleting this will delete everything about your player, including ender chests, bed spawn and your location</b> this file is located in <b>world/playerdata/‘youruuid’</b> to find your uuid just join the server and it will be displayed in the console/ your Minecraft log file. Alternatively you can find it by searching for your username on https://namemc.com/</p>
+    <p>​</p>
+    <p>or if you really know what you're doing you could edit your player.dat file manually</p>
+
+    <!-- Button -->
+    <a href="https://example.com" class="button">Learn More</a>
+  </div>
+
+  <!-- Back Button -->
+  <button class="return" id="backButton" onclick="goBack()"><=</button>
+  <script>
+    // JavaScript function to go back to the previous page
+    function goBack() {
+      window.history.back();
+    }
+
+    // Check if there's a page in the session history
+    if (window.history.length > 1) {
+      document.getElementById('backButton').style.display = 'inline-block'; // Show the button
+    }
+  </script>
+</body>
+</html>
